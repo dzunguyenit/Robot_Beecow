@@ -1,0 +1,1611 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180731 16:52:56.433" generator="Robot 3.0.4 (Python 2.7.15 on darwin)">
+<suite source="/Users/pha/Dropbox/ROBOT/Install/Source/Beecow_Web/tests/Register/Beecow_Register_data_driven.robot" id="s1" name="Beecow Register data driven">
+<test id="s1-t1" name="TC001_Register Fail With EMAIL validation - Data Driven">
+<kw type="setup" name="Open Browser And Goes To Register Page">
+<arguments>
+<arg>${SERVER_TEST}</arg>
+</arguments>
+<kw name="Open Browser And Click GetStarted Button" library="keyword_global">
+<doc>GLOBAL_KEY: Open Browser And Click GetStarted Button</doc>
+<arguments>
+<arg>${server_test}</arg>
+</arguments>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>SEPARATOR=</arg>
+<arg>${SERVER_SELENIUM}</arg>
+<arg>:4444/wd/hub</arg>
+</arguments>
+<assign>
+<var>${SERVER_STANDALONE}</var>
+</assign>
+<msg timestamp="20180731 16:52:56.736" level="INFO">${SERVER_STANDALONE} = http://localhost:4444/wd/hub</msg>
+<status status="PASS" endtime="20180731 16:52:56.736" starttime="20180731 16:52:56.735"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${SERVER_STANDALONE}</arg>
+</arguments>
+<msg timestamp="20180731 16:52:56.736" level="INFO">${SERVER_STANDALONE} = http://localhost:4444/wd/hub</msg>
+<status status="PASS" endtime="20180731 16:52:56.737" starttime="20180731 16:52:56.736"></status>
+</kw>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${url_sever}</arg>
+<arg>${BROWSER}</arg>
+<arg>remote_url=${SERVER_STANDALONE}</arg>
+</arguments>
+<msg timestamp="20180731 16:52:56.737" level="INFO">Opening browser 'gc' to base url 'https://beecow.mediastep.ca' through remote server at 'http://localhost:4444/wd/hub'.</msg>
+<status status="PASS" endtime="20180731 16:53:03.657" starttime="20180731 16:52:56.737"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20180731 16:53:03.658" starttime="20180731 16:53:03.657"></status>
+</kw>
+<kw name="Set Selenium Timeout" library="Selenium2Library">
+<doc>Sets the timeout that is used by various keywords.</doc>
+<arguments>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" endtime="20180731 16:53:03.929" starttime="20180731 16:53:03.658"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20180731 16:53:04.672" starttime="20180731 16:53:03.929"></status>
+</kw>
+<kw name="Select Language" library="keyword_global">
+<doc>GLOBAL_KEY: Click link language in getstarted popup</doc>
+<arguments>
+<arg>English</arg>
+</arguments>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${language_text}</arg>
+</arguments>
+<msg timestamp="20180731 16:53:04.673" level="INFO">Clicking link 'English'.</msg>
+<status status="PASS" endtime="20180731 16:53:06.036" starttime="20180731 16:53:04.673"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:53:06.036" starttime="20180731 16:53:04.672"></status>
+</kw>
+<kw name="Click Button GetStarted" library="keyword_global">
+<doc>GLOBAL_KEY: Click button getstarted when page is open</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>id=${ID.BTN.GETSTARTED}</arg>
+</arguments>
+<status status="PASS" endtime="20180731 16:53:06.585" starttime="20180731 16:53:06.038"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=${ID.BTN.GETSTARTED}</arg>
+</arguments>
+<msg timestamp="20180731 16:53:06.586" level="INFO">Clicking element 'id=btn-start-mobi'.</msg>
+<status status="PASS" endtime="20180731 16:53:07.358" starttime="20180731 16:53:06.586"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:53:07.358" starttime="20180731 16:53:06.037"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:53:07.358" starttime="20180731 16:52:56.735"></status>
+</kw>
+<kw name="Click Button Sign Up Header" library="keyword_global">
+<doc>GLOBAL_KEY: Click Button Sign Up Header</doc>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=${XPATH.BTN.SIGNUP}</arg>
+</arguments>
+<msg timestamp="20180731 16:53:07.360" level="INFO">Clicking element 'xpath=.//span[@beetranslate='beecow.action.signup']'.</msg>
+<status status="PASS" endtime="20180731 16:53:11.406" starttime="20180731 16:53:07.359"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:53:11.407" starttime="20180731 16:53:07.359"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:53:11.407" starttime="20180731 16:52:56.734"></status>
+</kw>
+<kw name="The Error Message Should Shown">
+<arguments>
+<arg>${empty}</arg>
+<arg>${empty}</arg>
+<arg>${empty}</arg>
+<arg>${expected_error_msg}</arg>
+</arguments>
+<kw name="Input Values Register Popup Page" library="page_register">
+<doc>REGISTER_KEY: Input Values Register Popup Page</doc>
+<arguments>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<arg>${fullname}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>id=${ID.TXT.POP.USERNAME}</arg>
+</arguments>
+<status status="PASS" endtime="20180731 16:53:12.358" starttime="20180731 16:53:11.415"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=${ID.TXT.POP.USERNAME}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20180731 16:53:12.360" level="INFO">Typing text '' into text field 'id=usr'.</msg>
+<status status="PASS" endtime="20180731 16:53:13.226" starttime="20180731 16:53:12.359"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=${XPATH.TXT.POP.PASSWORD}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20180731 16:53:13.227" level="INFO">Typing text '' into text field 'xpath=.//fieldset//input[@id='pwd']'.</msg>
+<status status="PASS" endtime="20180731 16:53:14.071" starttime="20180731 16:53:13.226"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=${ID.TXT.POP.YOUR.NAME}</arg>
+<arg>${fullname}</arg>
+</arguments>
+<msg timestamp="20180731 16:53:14.072" level="INFO">Typing text '' into text field 'id=displayName'.</msg>
+<status status="PASS" endtime="20180731 16:53:14.927" starttime="20180731 16:53:14.072"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:53:14.927" starttime="20180731 16:53:11.411"></status>
+</kw>
+<kw name="Click Button Continue Popup" library="page_register">
+<doc>REGISTER_KEY: Click button continue to register new user</doc>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=${XPATH.BTN.CONTINUE}</arg>
+</arguments>
+<msg timestamp="20180731 16:53:14.929" level="INFO">Clicking button 'xpath=.//button[@beetranslate='beecow.signup.continue']'.</msg>
+<status status="PASS" endtime="20180731 16:53:16.745" starttime="20180731 16:53:14.929"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:53:16.745" starttime="20180731 16:53:14.928"></status>
+</kw>
+<kw name="Verify The Error Message Should Be Displayed" library="page_login">
+<doc>LOGIN_KEY: Verify error message show for popup login</doc>
+<arguments>
+<arg>${error_msg}</arg>
+</arguments>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${error_msg}</arg>
+</arguments>
+<msg timestamp="20180731 16:53:17.299" level="INFO">Current page contains text 'Please enter email / phone number and password'.</msg>
+<status status="PASS" endtime="20180731 16:53:17.300" starttime="20180731 16:53:16.746"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:53:17.300" starttime="20180731 16:53:16.745"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:53:17.300" starttime="20180731 16:53:11.409"></status>
+</kw>
+<kw name="The Error Message Should Shown">
+<arguments>
+<arg>${empty}</arg>
+<arg>${pass_general}</arg>
+<arg>${empty}</arg>
+<arg>${expected_error_msg}</arg>
+</arguments>
+<kw name="Input Values Register Popup Page" library="page_register">
+<doc>REGISTER_KEY: Input Values Register Popup Page</doc>
+<arguments>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<arg>${fullname}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>id=${ID.TXT.POP.USERNAME}</arg>
+</arguments>
+<status status="PASS" endtime="20180731 16:53:17.831" starttime="20180731 16:53:17.302"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=${ID.TXT.POP.USERNAME}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20180731 16:53:17.831" level="INFO">Typing text '' into text field 'id=usr'.</msg>
+<status status="PASS" endtime="20180731 16:53:18.643" starttime="20180731 16:53:17.831"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=${XPATH.TXT.POP.PASSWORD}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20180731 16:53:18.644" level="INFO">Typing text '123456' into text field 'xpath=.//fieldset//input[@id='pwd']'.</msg>
+<status status="PASS" endtime="20180731 16:53:19.683" starttime="20180731 16:53:18.643"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=${ID.TXT.POP.YOUR.NAME}</arg>
+<arg>${fullname}</arg>
+</arguments>
+<msg timestamp="20180731 16:53:19.684" level="INFO">Typing text '' into text field 'id=displayName'.</msg>
+<status status="PASS" endtime="20180731 16:53:20.553" starttime="20180731 16:53:19.684"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:53:20.553" starttime="20180731 16:53:17.301"></status>
+</kw>
+<kw name="Click Button Continue Popup" library="page_register">
+<doc>REGISTER_KEY: Click button continue to register new user</doc>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=${XPATH.BTN.CONTINUE}</arg>
+</arguments>
+<msg timestamp="20180731 16:53:20.554" level="INFO">Clicking button 'xpath=.//button[@beetranslate='beecow.signup.continue']'.</msg>
+<status status="PASS" endtime="20180731 16:53:22.293" starttime="20180731 16:53:20.553"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:53:22.293" starttime="20180731 16:53:20.553"></status>
+</kw>
+<kw name="Verify The Error Message Should Be Displayed" library="page_login">
+<doc>LOGIN_KEY: Verify error message show for popup login</doc>
+<arguments>
+<arg>${error_msg}</arg>
+</arguments>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${error_msg}</arg>
+</arguments>
+<msg timestamp="20180731 16:53:22.831" level="INFO">Current page contains text 'Please enter email / phone number and password'.</msg>
+<status status="PASS" endtime="20180731 16:53:22.831" starttime="20180731 16:53:22.294"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:53:22.832" starttime="20180731 16:53:22.294"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:53:22.832" starttime="20180731 16:53:17.300"></status>
+</kw>
+<kw name="The Error Message Should Shown">
+<arguments>
+<arg>${empty}</arg>
+<arg>${empty}</arg>
+<arg>Full Name Valid</arg>
+<arg>${expected_error_msg}</arg>
+</arguments>
+<kw name="Input Values Register Popup Page" library="page_register">
+<doc>REGISTER_KEY: Input Values Register Popup Page</doc>
+<arguments>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<arg>${fullname}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>id=${ID.TXT.POP.USERNAME}</arg>
+</arguments>
+<status status="PASS" endtime="20180731 16:53:23.370" starttime="20180731 16:53:22.833"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=${ID.TXT.POP.USERNAME}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20180731 16:53:23.373" level="INFO">Typing text '' into text field 'id=usr'.</msg>
+<status status="PASS" endtime="20180731 16:53:24.231" starttime="20180731 16:53:23.371"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=${XPATH.TXT.POP.PASSWORD}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20180731 16:53:24.232" level="INFO">Typing text '' into text field 'xpath=.//fieldset//input[@id='pwd']'.</msg>
+<status status="PASS" endtime="20180731 16:53:25.078" starttime="20180731 16:53:24.231"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=${ID.TXT.POP.YOUR.NAME}</arg>
+<arg>${fullname}</arg>
+</arguments>
+<msg timestamp="20180731 16:53:25.080" level="INFO">Typing text 'Full Name Valid' into text field 'id=displayName'.</msg>
+<status status="PASS" endtime="20180731 16:53:26.450" starttime="20180731 16:53:25.078"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:53:26.450" starttime="20180731 16:53:22.833"></status>
+</kw>
+<kw name="Click Button Continue Popup" library="page_register">
+<doc>REGISTER_KEY: Click button continue to register new user</doc>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=${XPATH.BTN.CONTINUE}</arg>
+</arguments>
+<msg timestamp="20180731 16:53:26.451" level="INFO">Clicking button 'xpath=.//button[@beetranslate='beecow.signup.continue']'.</msg>
+<status status="PASS" endtime="20180731 16:53:28.133" starttime="20180731 16:53:26.451"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:53:28.134" starttime="20180731 16:53:26.450"></status>
+</kw>
+<kw name="Verify The Error Message Should Be Displayed" library="page_login">
+<doc>LOGIN_KEY: Verify error message show for popup login</doc>
+<arguments>
+<arg>${error_msg}</arg>
+</arguments>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${error_msg}</arg>
+</arguments>
+<msg timestamp="20180731 16:53:28.683" level="INFO">Current page contains text 'Please enter email / phone number and password'.</msg>
+<status status="PASS" endtime="20180731 16:53:28.683" starttime="20180731 16:53:28.137"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:53:28.684" starttime="20180731 16:53:28.135"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:53:28.684" starttime="20180731 16:53:22.832"></status>
+</kw>
+<kw name="The Error Message Should Shown">
+<arguments>
+<arg>${store_product_useremail}</arg>
+<arg>${pass_general}</arg>
+<arg>Full Name Valid</arg>
+<arg>${expected_error_msg_existed_email}</arg>
+</arguments>
+<kw name="Input Values Register Popup Page" library="page_register">
+<doc>REGISTER_KEY: Input Values Register Popup Page</doc>
+<arguments>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<arg>${fullname}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>id=${ID.TXT.POP.USERNAME}</arg>
+</arguments>
+<status status="PASS" endtime="20180731 16:53:29.231" starttime="20180731 16:53:28.685"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=${ID.TXT.POP.USERNAME}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20180731 16:53:29.232" level="INFO">Typing text 'prodstoreauto@yopmail.com' into text field 'id=usr'.</msg>
+<status status="PASS" endtime="20180731 16:53:30.751" starttime="20180731 16:53:29.232"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=${XPATH.TXT.POP.PASSWORD}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20180731 16:53:30.755" level="INFO">Typing text '123456' into text field 'xpath=.//fieldset//input[@id='pwd']'.</msg>
+<status status="PASS" endtime="20180731 16:53:31.741" starttime="20180731 16:53:30.752"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=${ID.TXT.POP.YOUR.NAME}</arg>
+<arg>${fullname}</arg>
+</arguments>
+<msg timestamp="20180731 16:53:31.743" level="INFO">Typing text 'Full Name Valid' into text field 'id=displayName'.</msg>
+<status status="PASS" endtime="20180731 16:53:32.975" starttime="20180731 16:53:31.742"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:53:32.976" starttime="20180731 16:53:28.685"></status>
+</kw>
+<kw name="Click Button Continue Popup" library="page_register">
+<doc>REGISTER_KEY: Click button continue to register new user</doc>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=${XPATH.BTN.CONTINUE}</arg>
+</arguments>
+<msg timestamp="20180731 16:53:32.976" level="INFO">Clicking button 'xpath=.//button[@beetranslate='beecow.signup.continue']'.</msg>
+<status status="PASS" endtime="20180731 16:53:34.635" starttime="20180731 16:53:32.976"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:53:34.636" starttime="20180731 16:53:32.976"></status>
+</kw>
+<kw name="Verify The Error Message Should Be Displayed" library="page_login">
+<doc>LOGIN_KEY: Verify error message show for popup login</doc>
+<arguments>
+<arg>${error_msg}</arg>
+</arguments>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${error_msg}</arg>
+</arguments>
+<msg timestamp="20180731 16:53:35.229" level="INFO">Current page contains text 'Email already exists'.</msg>
+<status status="PASS" endtime="20180731 16:53:35.230" starttime="20180731 16:53:34.637"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:53:35.230" starttime="20180731 16:53:34.636"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:53:35.230" starttime="20180731 16:53:28.684"></status>
+</kw>
+<kw name="The Error Message Should Shown">
+<arguments>
+<arg>prodstoreauto@yopmail</arg>
+<arg>${pass_general}</arg>
+<arg>Full Name Valid</arg>
+<arg>${expected_error_msg_invalid_email}</arg>
+</arguments>
+<kw name="Input Values Register Popup Page" library="page_register">
+<doc>REGISTER_KEY: Input Values Register Popup Page</doc>
+<arguments>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<arg>${fullname}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>id=${ID.TXT.POP.USERNAME}</arg>
+</arguments>
+<status status="PASS" endtime="20180731 16:53:35.760" starttime="20180731 16:53:35.231"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=${ID.TXT.POP.USERNAME}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20180731 16:53:35.762" level="INFO">Typing text 'prodstoreauto@yopmail' into text field 'id=usr'.</msg>
+<status status="PASS" endtime="20180731 16:53:37.392" starttime="20180731 16:53:35.761"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=${XPATH.TXT.POP.PASSWORD}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20180731 16:53:37.393" level="INFO">Typing text '123456' into text field 'xpath=.//fieldset//input[@id='pwd']'.</msg>
+<status status="PASS" endtime="20180731 16:53:38.770" starttime="20180731 16:53:37.393"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=${ID.TXT.POP.YOUR.NAME}</arg>
+<arg>${fullname}</arg>
+</arguments>
+<msg timestamp="20180731 16:53:38.772" level="INFO">Typing text 'Full Name Valid' into text field 'id=displayName'.</msg>
+<status status="PASS" endtime="20180731 16:53:41.567" starttime="20180731 16:53:38.771"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:53:41.567" starttime="20180731 16:53:35.231"></status>
+</kw>
+<kw name="Click Button Continue Popup" library="page_register">
+<doc>REGISTER_KEY: Click button continue to register new user</doc>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=${XPATH.BTN.CONTINUE}</arg>
+</arguments>
+<msg timestamp="20180731 16:53:41.568" level="INFO">Clicking button 'xpath=.//button[@beetranslate='beecow.signup.continue']'.</msg>
+<status status="PASS" endtime="20180731 16:53:43.713" starttime="20180731 16:53:41.568"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:53:43.714" starttime="20180731 16:53:41.567"></status>
+</kw>
+<kw name="Verify The Error Message Should Be Displayed" library="page_login">
+<doc>LOGIN_KEY: Verify error message show for popup login</doc>
+<arguments>
+<arg>${error_msg}</arg>
+</arguments>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${error_msg}</arg>
+</arguments>
+<msg timestamp="20180731 16:53:44.407" level="INFO">Current page contains text 'Invalid email'.</msg>
+<status status="PASS" endtime="20180731 16:53:44.407" starttime="20180731 16:53:43.715"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:53:44.407" starttime="20180731 16:53:43.714"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:53:44.408" starttime="20180731 16:53:35.230"></status>
+</kw>
+<kw name="The Error Message Should Shown">
+<arguments>
+<arg>&lt;script&gt;alert('Injected!');&lt;/script&gt;</arg>
+<arg>${pass_general}</arg>
+<arg>Full Name Valid</arg>
+<arg>${expected_error_msg_invalid_email}</arg>
+</arguments>
+<kw name="Input Values Register Popup Page" library="page_register">
+<doc>REGISTER_KEY: Input Values Register Popup Page</doc>
+<arguments>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<arg>${fullname}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>id=${ID.TXT.POP.USERNAME}</arg>
+</arguments>
+<status status="PASS" endtime="20180731 16:53:45.011" starttime="20180731 16:53:44.409"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=${ID.TXT.POP.USERNAME}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20180731 16:53:45.013" level="INFO">Typing text '&lt;script&gt;alert('Injected!');&lt;/script&gt;' into text field 'id=usr'.</msg>
+<status status="PASS" endtime="20180731 16:53:47.963" starttime="20180731 16:53:45.012"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=${XPATH.TXT.POP.PASSWORD}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20180731 16:53:47.965" level="INFO">Typing text '123456' into text field 'xpath=.//fieldset//input[@id='pwd']'.</msg>
+<status status="PASS" endtime="20180731 16:53:49.260" starttime="20180731 16:53:47.964"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=${ID.TXT.POP.YOUR.NAME}</arg>
+<arg>${fullname}</arg>
+</arguments>
+<msg timestamp="20180731 16:53:49.261" level="INFO">Typing text 'Full Name Valid' into text field 'id=displayName'.</msg>
+<status status="PASS" endtime="20180731 16:53:51.064" starttime="20180731 16:53:49.261"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:53:51.064" starttime="20180731 16:53:44.409"></status>
+</kw>
+<kw name="Click Button Continue Popup" library="page_register">
+<doc>REGISTER_KEY: Click button continue to register new user</doc>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=${XPATH.BTN.CONTINUE}</arg>
+</arguments>
+<msg timestamp="20180731 16:53:51.065" level="INFO">Clicking button 'xpath=.//button[@beetranslate='beecow.signup.continue']'.</msg>
+<status status="PASS" endtime="20180731 16:53:53.063" starttime="20180731 16:53:51.065"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:53:53.064" starttime="20180731 16:53:51.064"></status>
+</kw>
+<kw name="Verify The Error Message Should Be Displayed" library="page_login">
+<doc>LOGIN_KEY: Verify error message show for popup login</doc>
+<arguments>
+<arg>${error_msg}</arg>
+</arguments>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${error_msg}</arg>
+</arguments>
+<msg timestamp="20180731 16:53:53.706" level="INFO">Current page contains text 'Invalid email'.</msg>
+<status status="PASS" endtime="20180731 16:53:53.706" starttime="20180731 16:53:53.065"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:53:53.707" starttime="20180731 16:53:53.064"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:53:53.707" starttime="20180731 16:53:44.408"></status>
+</kw>
+<kw name="The Error Message Should Shown">
+<arguments>
+<arg>SELECT * FROM User where userId ='${store_product_useremail}' or '1'='1'</arg>
+<arg>${pass_general}</arg>
+<arg>Full Name Valid</arg>
+<arg>${expected_error_msg_invalid_email}</arg>
+</arguments>
+<kw name="Input Values Register Popup Page" library="page_register">
+<doc>REGISTER_KEY: Input Values Register Popup Page</doc>
+<arguments>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<arg>${fullname}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>id=${ID.TXT.POP.USERNAME}</arg>
+</arguments>
+<status status="PASS" endtime="20180731 16:53:54.315" starttime="20180731 16:53:53.710"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=${ID.TXT.POP.USERNAME}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20180731 16:53:54.315" level="INFO">Typing text 'SELECT * FROM User where userId ='prodstoreauto@yopmail.com' or '1'='1'' into text field 'id=usr'.</msg>
+<status status="PASS" endtime="20180731 16:53:59.108" starttime="20180731 16:53:54.315"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=${XPATH.TXT.POP.PASSWORD}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20180731 16:53:59.109" level="INFO">Typing text '123456' into text field 'xpath=.//fieldset//input[@id='pwd']'.</msg>
+<status status="PASS" endtime="20180731 16:54:00.409" starttime="20180731 16:53:59.108"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=${ID.TXT.POP.YOUR.NAME}</arg>
+<arg>${fullname}</arg>
+</arguments>
+<msg timestamp="20180731 16:54:00.410" level="INFO">Typing text 'Full Name Valid' into text field 'id=displayName'.</msg>
+<status status="PASS" endtime="20180731 16:54:02.171" starttime="20180731 16:54:00.410"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:54:02.172" starttime="20180731 16:53:53.708"></status>
+</kw>
+<kw name="Click Button Continue Popup" library="page_register">
+<doc>REGISTER_KEY: Click button continue to register new user</doc>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=${XPATH.BTN.CONTINUE}</arg>
+</arguments>
+<msg timestamp="20180731 16:54:02.172" level="INFO">Clicking button 'xpath=.//button[@beetranslate='beecow.signup.continue']'.</msg>
+<status status="PASS" endtime="20180731 16:54:04.109" starttime="20180731 16:54:02.172"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:54:04.110" starttime="20180731 16:54:02.172"></status>
+</kw>
+<kw name="Verify The Error Message Should Be Displayed" library="page_login">
+<doc>LOGIN_KEY: Verify error message show for popup login</doc>
+<arguments>
+<arg>${error_msg}</arg>
+</arguments>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${error_msg}</arg>
+</arguments>
+<msg timestamp="20180731 16:54:04.714" level="INFO">Current page contains text 'Invalid email'.</msg>
+<status status="PASS" endtime="20180731 16:54:04.714" starttime="20180731 16:54:04.111"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:54:04.714" starttime="20180731 16:54:04.110"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:54:04.714" starttime="20180731 16:53:53.707"></status>
+</kw>
+<kw type="teardown" name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20180731 16:54:05.056" starttime="20180731 16:54:04.715"></status>
+</kw>
+<tags>
+<tag>DataDriven</tag>
+<tag>RUN</tag>
+<tag>TC001</tag>
+</tags>
+<status status="PASS" endtime="20180731 16:54:05.057" critical="yes" starttime="20180731 16:52:56.733"></status>
+</test>
+<test id="s1-t2" name="TC002_Register Fail With PASSWORD validation - Data Driven">
+<kw type="setup" name="Open Browser And Goes To Register Page">
+<arguments>
+<arg>${SERVER_TEST}</arg>
+</arguments>
+<kw name="Open Browser And Click GetStarted Button" library="keyword_global">
+<doc>GLOBAL_KEY: Open Browser And Click GetStarted Button</doc>
+<arguments>
+<arg>${server_test}</arg>
+</arguments>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>SEPARATOR=</arg>
+<arg>${SERVER_SELENIUM}</arg>
+<arg>:4444/wd/hub</arg>
+</arguments>
+<assign>
+<var>${SERVER_STANDALONE}</var>
+</assign>
+<msg timestamp="20180731 16:54:05.069" level="INFO">${SERVER_STANDALONE} = http://localhost:4444/wd/hub</msg>
+<status status="PASS" endtime="20180731 16:54:05.069" starttime="20180731 16:54:05.067"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${SERVER_STANDALONE}</arg>
+</arguments>
+<msg timestamp="20180731 16:54:05.071" level="INFO">${SERVER_STANDALONE} = http://localhost:4444/wd/hub</msg>
+<status status="PASS" endtime="20180731 16:54:05.071" starttime="20180731 16:54:05.069"></status>
+</kw>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${url_sever}</arg>
+<arg>${BROWSER}</arg>
+<arg>remote_url=${SERVER_STANDALONE}</arg>
+</arguments>
+<msg timestamp="20180731 16:54:05.072" level="INFO">Opening browser 'gc' to base url 'https://beecow.mediastep.ca' through remote server at 'http://localhost:4444/wd/hub'.</msg>
+<status status="PASS" endtime="20180731 16:54:13.630" starttime="20180731 16:54:05.072"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20180731 16:54:13.632" starttime="20180731 16:54:13.631"></status>
+</kw>
+<kw name="Set Selenium Timeout" library="Selenium2Library">
+<doc>Sets the timeout that is used by various keywords.</doc>
+<arguments>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" endtime="20180731 16:54:13.901" starttime="20180731 16:54:13.633"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20180731 16:54:14.643" starttime="20180731 16:54:13.902"></status>
+</kw>
+<kw name="Select Language" library="keyword_global">
+<doc>GLOBAL_KEY: Click link language in getstarted popup</doc>
+<arguments>
+<arg>English</arg>
+</arguments>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${language_text}</arg>
+</arguments>
+<msg timestamp="20180731 16:54:14.645" level="INFO">Clicking link 'English'.</msg>
+<status status="PASS" endtime="20180731 16:54:15.966" starttime="20180731 16:54:14.645"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:54:15.966" starttime="20180731 16:54:14.644"></status>
+</kw>
+<kw name="Click Button GetStarted" library="keyword_global">
+<doc>GLOBAL_KEY: Click button getstarted when page is open</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>id=${ID.BTN.GETSTARTED}</arg>
+</arguments>
+<status status="PASS" endtime="20180731 16:54:16.516" starttime="20180731 16:54:15.967"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=${ID.BTN.GETSTARTED}</arg>
+</arguments>
+<msg timestamp="20180731 16:54:16.517" level="INFO">Clicking element 'id=btn-start-mobi'.</msg>
+<status status="PASS" endtime="20180731 16:54:17.336" starttime="20180731 16:54:16.516"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:54:17.336" starttime="20180731 16:54:15.966"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:54:17.340" starttime="20180731 16:54:05.066"></status>
+</kw>
+<kw name="Click Button Sign Up Header" library="keyword_global">
+<doc>GLOBAL_KEY: Click Button Sign Up Header</doc>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=${XPATH.BTN.SIGNUP}</arg>
+</arguments>
+<msg timestamp="20180731 16:54:17.344" level="INFO">Clicking element 'xpath=.//span[@beetranslate='beecow.action.signup']'.</msg>
+<status status="PASS" endtime="20180731 16:54:22.293" starttime="20180731 16:54:17.344"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:54:22.293" starttime="20180731 16:54:17.341"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:54:22.293" starttime="20180731 16:54:05.062"></status>
+</kw>
+<kw name="The Error Message Should Shown">
+<arguments>
+<arg>validusertest@yopmail.com</arg>
+<arg>${empty}</arg>
+<arg>Full Name Valid</arg>
+<arg>${expected_error_msg}</arg>
+</arguments>
+<kw name="Input Values Register Popup Page" library="page_register">
+<doc>REGISTER_KEY: Input Values Register Popup Page</doc>
+<arguments>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<arg>${fullname}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>id=${ID.TXT.POP.USERNAME}</arg>
+</arguments>
+<status status="PASS" endtime="20180731 16:54:23.209" starttime="20180731 16:54:22.296"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=${ID.TXT.POP.USERNAME}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20180731 16:54:23.210" level="INFO">Typing text 'validusertest@yopmail.com' into text field 'id=usr'.</msg>
+<status status="PASS" endtime="20180731 16:54:24.915" starttime="20180731 16:54:23.209"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=${XPATH.TXT.POP.PASSWORD}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20180731 16:54:24.916" level="INFO">Typing text '' into text field 'xpath=.//fieldset//input[@id='pwd']'.</msg>
+<status status="PASS" endtime="20180731 16:54:25.792" starttime="20180731 16:54:24.915"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=${ID.TXT.POP.YOUR.NAME}</arg>
+<arg>${fullname}</arg>
+</arguments>
+<msg timestamp="20180731 16:54:25.793" level="INFO">Typing text 'Full Name Valid' into text field 'id=displayName'.</msg>
+<status status="PASS" endtime="20180731 16:54:27.403" starttime="20180731 16:54:25.793"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:54:27.404" starttime="20180731 16:54:22.295"></status>
+</kw>
+<kw name="Click Button Continue Popup" library="page_register">
+<doc>REGISTER_KEY: Click button continue to register new user</doc>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=${XPATH.BTN.CONTINUE}</arg>
+</arguments>
+<msg timestamp="20180731 16:54:27.405" level="INFO">Clicking button 'xpath=.//button[@beetranslate='beecow.signup.continue']'.</msg>
+<status status="PASS" endtime="20180731 16:54:29.339" starttime="20180731 16:54:27.405"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:54:29.339" starttime="20180731 16:54:27.405"></status>
+</kw>
+<kw name="Verify The Error Message Should Be Displayed" library="page_login">
+<doc>LOGIN_KEY: Verify error message show for popup login</doc>
+<arguments>
+<arg>${error_msg}</arg>
+</arguments>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${error_msg}</arg>
+</arguments>
+<msg timestamp="20180731 16:54:29.968" level="INFO">Current page contains text 'Please enter email / phone number and password'.</msg>
+<status status="PASS" endtime="20180731 16:54:29.968" starttime="20180731 16:54:29.341"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:54:29.968" starttime="20180731 16:54:29.340"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:54:29.969" starttime="20180731 16:54:22.294"></status>
+</kw>
+<kw name="The Error Message Should Shown">
+<arguments>
+<arg>validusertest@yopmail.com</arg>
+<arg>12345</arg>
+<arg>Full Name Valid</arg>
+<arg>${expected_error_msg_invalid_password}</arg>
+</arguments>
+<kw name="Input Values Register Popup Page" library="page_register">
+<doc>REGISTER_KEY: Input Values Register Popup Page</doc>
+<arguments>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<arg>${fullname}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>id=${ID.TXT.POP.USERNAME}</arg>
+</arguments>
+<status status="PASS" endtime="20180731 16:54:30.499" starttime="20180731 16:54:29.970"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=${ID.TXT.POP.USERNAME}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20180731 16:54:30.503" level="INFO">Typing text 'validusertest@yopmail.com' into text field 'id=usr'.</msg>
+<status status="PASS" endtime="20180731 16:54:32.468" starttime="20180731 16:54:30.500"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=${XPATH.TXT.POP.PASSWORD}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20180731 16:54:32.469" level="INFO">Typing text '12345' into text field 'xpath=.//fieldset//input[@id='pwd']'.</msg>
+<status status="PASS" endtime="20180731 16:54:33.444" starttime="20180731 16:54:32.469"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=${ID.TXT.POP.YOUR.NAME}</arg>
+<arg>${fullname}</arg>
+</arguments>
+<msg timestamp="20180731 16:54:33.445" level="INFO">Typing text 'Full Name Valid' into text field 'id=displayName'.</msg>
+<status status="PASS" endtime="20180731 16:54:35.044" starttime="20180731 16:54:33.445"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:54:35.044" starttime="20180731 16:54:29.970"></status>
+</kw>
+<kw name="Click Button Continue Popup" library="page_register">
+<doc>REGISTER_KEY: Click button continue to register new user</doc>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=${XPATH.BTN.CONTINUE}</arg>
+</arguments>
+<msg timestamp="20180731 16:54:35.045" level="INFO">Clicking button 'xpath=.//button[@beetranslate='beecow.signup.continue']'.</msg>
+<status status="PASS" endtime="20180731 16:54:36.764" starttime="20180731 16:54:35.045"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:54:36.764" starttime="20180731 16:54:35.044"></status>
+</kw>
+<kw name="Verify The Error Message Should Be Displayed" library="page_login">
+<doc>LOGIN_KEY: Verify error message show for popup login</doc>
+<arguments>
+<arg>${error_msg}</arg>
+</arguments>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${error_msg}</arg>
+</arguments>
+<msg timestamp="20180731 16:54:37.317" level="INFO">Current page contains text 'Minimum 6 characters'.</msg>
+<status status="PASS" endtime="20180731 16:54:37.318" starttime="20180731 16:54:36.765"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:54:37.318" starttime="20180731 16:54:36.765"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:54:37.318" starttime="20180731 16:54:29.969"></status>
+</kw>
+<kw type="teardown" name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20180731 16:54:37.699" starttime="20180731 16:54:37.319"></status>
+</kw>
+<tags>
+<tag>DataDriven</tag>
+<tag>RUN</tag>
+<tag>TC002</tag>
+</tags>
+<status status="PASS" endtime="20180731 16:54:37.699" critical="yes" starttime="20180731 16:54:05.060"></status>
+</test>
+<test id="s1-t3" name="TC003_Register Fail With FULLNAME validation - Data Driven">
+<kw type="setup" name="Open Browser And Goes To Register Page">
+<arguments>
+<arg>${SERVER_TEST}</arg>
+</arguments>
+<kw name="Open Browser And Click GetStarted Button" library="keyword_global">
+<doc>GLOBAL_KEY: Open Browser And Click GetStarted Button</doc>
+<arguments>
+<arg>${server_test}</arg>
+</arguments>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>SEPARATOR=</arg>
+<arg>${SERVER_SELENIUM}</arg>
+<arg>:4444/wd/hub</arg>
+</arguments>
+<assign>
+<var>${SERVER_STANDALONE}</var>
+</assign>
+<msg timestamp="20180731 16:54:37.704" level="INFO">${SERVER_STANDALONE} = http://localhost:4444/wd/hub</msg>
+<status status="PASS" endtime="20180731 16:54:37.705" starttime="20180731 16:54:37.704"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${SERVER_STANDALONE}</arg>
+</arguments>
+<msg timestamp="20180731 16:54:37.705" level="INFO">${SERVER_STANDALONE} = http://localhost:4444/wd/hub</msg>
+<status status="PASS" endtime="20180731 16:54:37.705" starttime="20180731 16:54:37.705"></status>
+</kw>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${url_sever}</arg>
+<arg>${BROWSER}</arg>
+<arg>remote_url=${SERVER_STANDALONE}</arg>
+</arguments>
+<msg timestamp="20180731 16:54:37.706" level="INFO">Opening browser 'gc' to base url 'https://beecow.mediastep.ca' through remote server at 'http://localhost:4444/wd/hub'.</msg>
+<status status="PASS" endtime="20180731 16:54:45.643" starttime="20180731 16:54:37.705"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20180731 16:54:45.644" starttime="20180731 16:54:45.644"></status>
+</kw>
+<kw name="Set Selenium Timeout" library="Selenium2Library">
+<doc>Sets the timeout that is used by various keywords.</doc>
+<arguments>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" endtime="20180731 16:54:45.904" starttime="20180731 16:54:45.645"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20180731 16:54:46.642" starttime="20180731 16:54:45.905"></status>
+</kw>
+<kw name="Select Language" library="keyword_global">
+<doc>GLOBAL_KEY: Click link language in getstarted popup</doc>
+<arguments>
+<arg>English</arg>
+</arguments>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${language_text}</arg>
+</arguments>
+<msg timestamp="20180731 16:54:46.644" level="INFO">Clicking link 'English'.</msg>
+<status status="PASS" endtime="20180731 16:54:47.935" starttime="20180731 16:54:46.643"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:54:47.936" starttime="20180731 16:54:46.643"></status>
+</kw>
+<kw name="Click Button GetStarted" library="keyword_global">
+<doc>GLOBAL_KEY: Click button getstarted when page is open</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>id=${ID.BTN.GETSTARTED}</arg>
+</arguments>
+<status status="PASS" endtime="20180731 16:54:48.477" starttime="20180731 16:54:47.936"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=${ID.BTN.GETSTARTED}</arg>
+</arguments>
+<msg timestamp="20180731 16:54:48.478" level="INFO">Clicking element 'id=btn-start-mobi'.</msg>
+<status status="PASS" endtime="20180731 16:54:49.313" starttime="20180731 16:54:48.477"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:54:49.313" starttime="20180731 16:54:47.936"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:54:49.314" starttime="20180731 16:54:37.703"></status>
+</kw>
+<kw name="Click Button Sign Up Header" library="keyword_global">
+<doc>GLOBAL_KEY: Click Button Sign Up Header</doc>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=${XPATH.BTN.SIGNUP}</arg>
+</arguments>
+<msg timestamp="20180731 16:54:49.315" level="INFO">Clicking element 'xpath=.//span[@beetranslate='beecow.action.signup']'.</msg>
+<status status="PASS" endtime="20180731 16:54:53.829" starttime="20180731 16:54:49.315"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:54:53.829" starttime="20180731 16:54:49.314"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:54:53.829" starttime="20180731 16:54:37.702"></status>
+</kw>
+<kw name="The Error Message Should Shown">
+<arguments>
+<arg>${store_product_useremail}</arg>
+<arg>${pass_general}</arg>
+<arg>${empty}</arg>
+<arg>${expected_error_msg_empty_fullname}</arg>
+</arguments>
+<kw name="Input Values Register Popup Page" library="page_register">
+<doc>REGISTER_KEY: Input Values Register Popup Page</doc>
+<arguments>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<arg>${fullname}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>id=${ID.TXT.POP.USERNAME}</arg>
+</arguments>
+<status status="PASS" endtime="20180731 16:54:55.290" starttime="20180731 16:54:53.832"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=${ID.TXT.POP.USERNAME}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20180731 16:54:55.291" level="INFO">Typing text 'prodstoreauto@yopmail.com' into text field 'id=usr'.</msg>
+<status status="PASS" endtime="20180731 16:54:57.283" starttime="20180731 16:54:55.290"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=${XPATH.TXT.POP.PASSWORD}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20180731 16:54:57.284" level="INFO">Typing text '123456' into text field 'xpath=.//fieldset//input[@id='pwd']'.</msg>
+<status status="PASS" endtime="20180731 16:54:58.522" starttime="20180731 16:54:57.283"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=${ID.TXT.POP.YOUR.NAME}</arg>
+<arg>${fullname}</arg>
+</arguments>
+<msg timestamp="20180731 16:54:58.523" level="INFO">Typing text '' into text field 'id=displayName'.</msg>
+<status status="PASS" endtime="20180731 16:54:59.375" starttime="20180731 16:54:58.522"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:54:59.375" starttime="20180731 16:54:53.831"></status>
+</kw>
+<kw name="Click Button Continue Popup" library="page_register">
+<doc>REGISTER_KEY: Click button continue to register new user</doc>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=${XPATH.BTN.CONTINUE}</arg>
+</arguments>
+<msg timestamp="20180731 16:54:59.376" level="INFO">Clicking button 'xpath=.//button[@beetranslate='beecow.signup.continue']'.</msg>
+<status status="PASS" endtime="20180731 16:55:01.170" starttime="20180731 16:54:59.376"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:55:01.170" starttime="20180731 16:54:59.375"></status>
+</kw>
+<kw name="Verify The Error Message Should Be Displayed" library="page_login">
+<doc>LOGIN_KEY: Verify error message show for popup login</doc>
+<arguments>
+<arg>${error_msg}</arg>
+</arguments>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${error_msg}</arg>
+</arguments>
+<msg timestamp="20180731 16:55:01.726" level="INFO">Current page contains text 'Please enter your name'.</msg>
+<status status="PASS" endtime="20180731 16:55:01.726" starttime="20180731 16:55:01.171"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:55:01.726" starttime="20180731 16:55:01.170"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:55:01.726" starttime="20180731 16:54:53.830"></status>
+</kw>
+<kw name="The Error Message Should Shown">
+<arguments>
+<arg>${store_product_useremail}</arg>
+<arg>${pass_general}</arg>
+<arg>&lt;script&gt;alert('Injected!');&lt;/script&gt;</arg>
+<arg>${expected_error_msg_invalid_characters}</arg>
+</arguments>
+<kw name="Input Values Register Popup Page" library="page_register">
+<doc>REGISTER_KEY: Input Values Register Popup Page</doc>
+<arguments>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<arg>${fullname}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>id=${ID.TXT.POP.USERNAME}</arg>
+</arguments>
+<status status="PASS" endtime="20180731 16:55:02.260" starttime="20180731 16:55:01.728"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=${ID.TXT.POP.USERNAME}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20180731 16:55:02.261" level="INFO">Typing text 'prodstoreauto@yopmail.com' into text field 'id=usr'.</msg>
+<status status="PASS" endtime="20180731 16:55:03.991" starttime="20180731 16:55:02.260"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=${XPATH.TXT.POP.PASSWORD}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20180731 16:55:03.992" level="INFO">Typing text '123456' into text field 'xpath=.//fieldset//input[@id='pwd']'.</msg>
+<status status="PASS" endtime="20180731 16:55:05.091" starttime="20180731 16:55:03.991"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=${ID.TXT.POP.YOUR.NAME}</arg>
+<arg>${fullname}</arg>
+</arguments>
+<msg timestamp="20180731 16:55:05.092" level="INFO">Typing text '&lt;script&gt;alert('Injected!');&lt;/script&gt;' into text field 'id=displayName'.</msg>
+<status status="PASS" endtime="20180731 16:55:07.149" starttime="20180731 16:55:05.091"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:55:07.150" starttime="20180731 16:55:01.727"></status>
+</kw>
+<kw name="Click Button Continue Popup" library="page_register">
+<doc>REGISTER_KEY: Click button continue to register new user</doc>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=${XPATH.BTN.CONTINUE}</arg>
+</arguments>
+<msg timestamp="20180731 16:55:07.154" level="INFO">Clicking button 'xpath=.//button[@beetranslate='beecow.signup.continue']'.</msg>
+<status status="PASS" endtime="20180731 16:55:08.974" starttime="20180731 16:55:07.153"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:55:08.975" starttime="20180731 16:55:07.152"></status>
+</kw>
+<kw name="Verify The Error Message Should Be Displayed" library="page_login">
+<doc>LOGIN_KEY: Verify error message show for popup login</doc>
+<arguments>
+<arg>${error_msg}</arg>
+</arguments>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${error_msg}</arg>
+</arguments>
+<msg timestamp="20180731 16:55:09.529" level="INFO">Current page contains text 'Your name excludes special characters'.</msg>
+<status status="PASS" endtime="20180731 16:55:09.529" starttime="20180731 16:55:08.975"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:55:09.529" starttime="20180731 16:55:08.975"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:55:09.529" starttime="20180731 16:55:01.727"></status>
+</kw>
+<kw name="The Error Message Should Shown">
+<arguments>
+<arg>${store_product_useremail}</arg>
+<arg>${pass_general}</arg>
+<arg>SELECT * FROM User where userId ='${store_product_useremail}' or '1'='1'</arg>
+<arg>${expected_error_msg_invalid_characters}</arg>
+</arguments>
+<kw name="Input Values Register Popup Page" library="page_register">
+<doc>REGISTER_KEY: Input Values Register Popup Page</doc>
+<arguments>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<arg>${fullname}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>id=${ID.TXT.POP.USERNAME}</arg>
+</arguments>
+<status status="PASS" endtime="20180731 16:55:10.061" starttime="20180731 16:55:09.531"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=${ID.TXT.POP.USERNAME}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20180731 16:55:10.063" level="INFO">Typing text 'prodstoreauto@yopmail.com' into text field 'id=usr'.</msg>
+<status status="PASS" endtime="20180731 16:55:12.417" starttime="20180731 16:55:10.062"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=${XPATH.TXT.POP.PASSWORD}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20180731 16:55:12.418" level="INFO">Typing text '123456' into text field 'xpath=.//fieldset//input[@id='pwd']'.</msg>
+<status status="PASS" endtime="20180731 16:55:13.450" starttime="20180731 16:55:12.418"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=${ID.TXT.POP.YOUR.NAME}</arg>
+<arg>${fullname}</arg>
+</arguments>
+<msg timestamp="20180731 16:55:13.451" level="INFO">Typing text 'SELECT * FROM User where userId ='prodstoreauto@yopmail.com' or '1'='1'' into text field 'id=displayName'.</msg>
+<status status="PASS" endtime="20180731 16:55:16.616" starttime="20180731 16:55:13.451"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:55:16.617" starttime="20180731 16:55:09.531"></status>
+</kw>
+<kw name="Click Button Continue Popup" library="page_register">
+<doc>REGISTER_KEY: Click button continue to register new user</doc>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=${XPATH.BTN.CONTINUE}</arg>
+</arguments>
+<msg timestamp="20180731 16:55:16.619" level="INFO">Clicking button 'xpath=.//button[@beetranslate='beecow.signup.continue']'.</msg>
+<status status="PASS" endtime="20180731 16:55:18.433" starttime="20180731 16:55:16.618"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:55:18.434" starttime="20180731 16:55:16.617"></status>
+</kw>
+<kw name="Verify The Error Message Should Be Displayed" library="page_login">
+<doc>LOGIN_KEY: Verify error message show for popup login</doc>
+<arguments>
+<arg>${error_msg}</arg>
+</arguments>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${error_msg}</arg>
+</arguments>
+<msg timestamp="20180731 16:55:18.982" level="INFO">Current page contains text 'Your name excludes special characters'.</msg>
+<status status="PASS" endtime="20180731 16:55:18.983" starttime="20180731 16:55:18.434"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:55:18.983" starttime="20180731 16:55:18.434"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:55:18.983" starttime="20180731 16:55:09.530"></status>
+</kw>
+<kw type="teardown" name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20180731 16:55:19.305" starttime="20180731 16:55:18.984"></status>
+</kw>
+<tags>
+<tag>DataDriven</tag>
+<tag>TC003</tag>
+</tags>
+<status status="PASS" endtime="20180731 16:55:19.305" critical="yes" starttime="20180731 16:54:37.700"></status>
+</test>
+<test id="s1-t4" name="TC004_Register Fail with fields Contain Special Characters - Data Driven">
+<kw type="setup" name="Open Browser And Goes To Register Page">
+<arguments>
+<arg>${SERVER_TEST}</arg>
+</arguments>
+<kw name="Open Browser And Click GetStarted Button" library="keyword_global">
+<doc>GLOBAL_KEY: Open Browser And Click GetStarted Button</doc>
+<arguments>
+<arg>${server_test}</arg>
+</arguments>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>SEPARATOR=</arg>
+<arg>${SERVER_SELENIUM}</arg>
+<arg>:4444/wd/hub</arg>
+</arguments>
+<assign>
+<var>${SERVER_STANDALONE}</var>
+</assign>
+<msg timestamp="20180731 16:55:19.310" level="INFO">${SERVER_STANDALONE} = http://localhost:4444/wd/hub</msg>
+<status status="PASS" endtime="20180731 16:55:19.310" starttime="20180731 16:55:19.310"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${SERVER_STANDALONE}</arg>
+</arguments>
+<msg timestamp="20180731 16:55:19.311" level="INFO">${SERVER_STANDALONE} = http://localhost:4444/wd/hub</msg>
+<status status="PASS" endtime="20180731 16:55:19.311" starttime="20180731 16:55:19.311"></status>
+</kw>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${url_sever}</arg>
+<arg>${BROWSER}</arg>
+<arg>remote_url=${SERVER_STANDALONE}</arg>
+</arguments>
+<msg timestamp="20180731 16:55:19.311" level="INFO">Opening browser 'gc' to base url 'https://beecow.mediastep.ca' through remote server at 'http://localhost:4444/wd/hub'.</msg>
+<status status="PASS" endtime="20180731 16:55:30.524" starttime="20180731 16:55:19.311"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20180731 16:55:30.533" starttime="20180731 16:55:30.528"></status>
+</kw>
+<kw name="Set Selenium Timeout" library="Selenium2Library">
+<doc>Sets the timeout that is used by various keywords.</doc>
+<arguments>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" endtime="20180731 16:55:30.797" starttime="20180731 16:55:30.534"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20180731 16:55:31.575" starttime="20180731 16:55:30.798"></status>
+</kw>
+<kw name="Select Language" library="keyword_global">
+<doc>GLOBAL_KEY: Click link language in getstarted popup</doc>
+<arguments>
+<arg>English</arg>
+</arguments>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${language_text}</arg>
+</arguments>
+<msg timestamp="20180731 16:55:31.581" level="INFO">Clicking link 'English'.</msg>
+<status status="PASS" endtime="20180731 16:55:40.001" starttime="20180731 16:55:31.580"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:55:40.001" starttime="20180731 16:55:31.577"></status>
+</kw>
+<kw name="Click Button GetStarted" library="keyword_global">
+<doc>GLOBAL_KEY: Click button getstarted when page is open</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>id=${ID.BTN.GETSTARTED}</arg>
+</arguments>
+<status status="PASS" endtime="20180731 16:55:40.683" starttime="20180731 16:55:40.003"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=${ID.BTN.GETSTARTED}</arg>
+</arguments>
+<msg timestamp="20180731 16:55:40.684" level="INFO">Clicking element 'id=btn-start-mobi'.</msg>
+<status status="PASS" endtime="20180731 16:55:42.549" starttime="20180731 16:55:40.684"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:55:42.549" starttime="20180731 16:55:40.002"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:55:42.550" starttime="20180731 16:55:19.310"></status>
+</kw>
+<kw name="Click Button Sign Up Header" library="keyword_global">
+<doc>GLOBAL_KEY: Click Button Sign Up Header</doc>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=${XPATH.BTN.SIGNUP}</arg>
+</arguments>
+<msg timestamp="20180731 16:55:42.552" level="INFO">Clicking element 'xpath=.//span[@beetranslate='beecow.action.signup']'.</msg>
+<status status="PASS" endtime="20180731 16:56:05.869" starttime="20180731 16:55:42.552"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:56:05.869" starttime="20180731 16:55:42.551"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:56:05.869" starttime="20180731 16:55:19.309"></status>
+</kw>
+<kw name="The Error Message Should Shown">
+<arguments>
+<arg>!^%^%^&amp;*(</arg>
+<arg>${pass_general}</arg>
+<arg>Full Name Valid</arg>
+<arg>${expected_error_msg_invalid_email}</arg>
+</arguments>
+<kw name="Input Values Register Popup Page" library="page_register">
+<doc>REGISTER_KEY: Input Values Register Popup Page</doc>
+<arguments>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<arg>${fullname}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>id=${ID.TXT.POP.USERNAME}</arg>
+</arguments>
+<status status="PASS" endtime="20180731 16:56:09.636" starttime="20180731 16:56:05.873"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=${ID.TXT.POP.USERNAME}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20180731 16:56:09.638" level="INFO">Typing text '!^%^%^&amp;*(' into text field 'id=usr'.</msg>
+<status status="PASS" endtime="20180731 16:56:11.514" starttime="20180731 16:56:09.637"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=${XPATH.TXT.POP.PASSWORD}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20180731 16:56:11.516" level="INFO">Typing text '123456' into text field 'xpath=.//fieldset//input[@id='pwd']'.</msg>
+<status status="PASS" endtime="20180731 16:56:13.093" starttime="20180731 16:56:11.515"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=${ID.TXT.POP.YOUR.NAME}</arg>
+<arg>${fullname}</arg>
+</arguments>
+<msg timestamp="20180731 16:56:13.094" level="INFO">Typing text 'Full Name Valid' into text field 'id=displayName'.</msg>
+<status status="PASS" endtime="20180731 16:56:16.098" starttime="20180731 16:56:13.093"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:56:16.098" starttime="20180731 16:56:05.872"></status>
+</kw>
+<kw name="Click Button Continue Popup" library="page_register">
+<doc>REGISTER_KEY: Click button continue to register new user</doc>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=${XPATH.BTN.CONTINUE}</arg>
+</arguments>
+<msg timestamp="20180731 16:56:16.101" level="INFO">Clicking button 'xpath=.//button[@beetranslate='beecow.signup.continue']'.</msg>
+<status status="PASS" endtime="20180731 16:56:18.674" starttime="20180731 16:56:16.099"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:56:18.677" starttime="20180731 16:56:16.098"></status>
+</kw>
+<kw name="Verify The Error Message Should Be Displayed" library="page_login">
+<doc>LOGIN_KEY: Verify error message show for popup login</doc>
+<arguments>
+<arg>${error_msg}</arg>
+</arguments>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${error_msg}</arg>
+</arguments>
+<msg timestamp="20180731 16:56:19.299" level="INFO">Current page contains text 'Invalid email'.</msg>
+<status status="PASS" endtime="20180731 16:56:19.299" starttime="20180731 16:56:18.679"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:56:19.299" starttime="20180731 16:56:18.678"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:56:19.300" starttime="20180731 16:56:05.870"></status>
+</kw>
+<kw name="The Error Message Should Shown">
+<arguments>
+<arg>${store_product_useremail}</arg>
+<arg>${pass_general}</arg>
+<arg>!^%^%^&amp;*(</arg>
+<arg>${expected_error_msg_invalid_characters}</arg>
+</arguments>
+<kw name="Input Values Register Popup Page" library="page_register">
+<doc>REGISTER_KEY: Input Values Register Popup Page</doc>
+<arguments>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<arg>${fullname}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>id=${ID.TXT.POP.USERNAME}</arg>
+</arguments>
+<status status="PASS" endtime="20180731 16:56:19.999" starttime="20180731 16:56:19.304"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=${ID.TXT.POP.USERNAME}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20180731 16:56:20.003" level="INFO">Typing text 'prodstoreauto@yopmail.com' into text field 'id=usr'.</msg>
+<status status="PASS" endtime="20180731 16:56:22.561" starttime="20180731 16:56:20.000"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=${XPATH.TXT.POP.PASSWORD}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20180731 16:56:22.563" level="INFO">Typing text '123456' into text field 'xpath=.//fieldset//input[@id='pwd']'.</msg>
+<status status="PASS" endtime="20180731 16:56:24.163" starttime="20180731 16:56:22.562"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=${ID.TXT.POP.YOUR.NAME}</arg>
+<arg>${fullname}</arg>
+</arguments>
+<msg timestamp="20180731 16:56:24.165" level="INFO">Typing text '!^%^%^&amp;*(' into text field 'id=displayName'.</msg>
+<status status="PASS" endtime="20180731 16:56:25.663" starttime="20180731 16:56:24.164"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:56:25.663" starttime="20180731 16:56:19.302"></status>
+</kw>
+<kw name="Click Button Continue Popup" library="page_register">
+<doc>REGISTER_KEY: Click button continue to register new user</doc>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=${XPATH.BTN.CONTINUE}</arg>
+</arguments>
+<msg timestamp="20180731 16:56:25.665" level="INFO">Clicking button 'xpath=.//button[@beetranslate='beecow.signup.continue']'.</msg>
+<status status="PASS" endtime="20180731 16:56:27.462" starttime="20180731 16:56:25.665"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:56:27.462" starttime="20180731 16:56:25.664"></status>
+</kw>
+<kw name="Verify The Error Message Should Be Displayed" library="page_login">
+<doc>LOGIN_KEY: Verify error message show for popup login</doc>
+<arguments>
+<arg>${error_msg}</arg>
+</arguments>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${error_msg}</arg>
+</arguments>
+<msg timestamp="20180731 16:56:28.042" level="INFO">Current page contains text 'Your name excludes special characters'.</msg>
+<status status="PASS" endtime="20180731 16:56:28.042" starttime="20180731 16:56:27.463"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:56:28.043" starttime="20180731 16:56:27.462"></status>
+</kw>
+<status status="PASS" endtime="20180731 16:56:28.043" starttime="20180731 16:56:19.300"></status>
+</kw>
+<kw type="teardown" name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20180731 16:56:28.423" starttime="20180731 16:56:28.044"></status>
+</kw>
+<tags>
+<tag>DataDriven</tag>
+<tag>TC004</tag>
+</tags>
+<status status="PASS" endtime="20180731 16:56:28.423" critical="yes" starttime="20180731 16:55:19.307"></status>
+</test>
+<doc>/* Test Suite Register Beecow with data driven */
+/* Author: Phuoc Ha */</doc>
+<status status="PASS" endtime="20180731 16:56:28.426" starttime="20180731 16:52:56.436"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="4">Critical Tests</stat>
+<stat fail="0" pass="4">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="4">DataDriven</stat>
+<stat fail="0" pass="2">RUN</stat>
+<stat fail="0" pass="1">TC001</stat>
+<stat fail="0" pass="1">TC002</stat>
+<stat fail="0" pass="1">TC003</stat>
+<stat fail="0" pass="1">TC004</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Beecow Register data driven" pass="4">Beecow Register data driven</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
